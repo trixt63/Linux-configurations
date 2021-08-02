@@ -19,11 +19,6 @@ Notes for some common problems in Linux
 `
 	xfce4-terminal -x sh -c "speedtest; bash"
 `
-2. Keyboard shortcuts
-- Command to open speedtest-cli in another terminal window in Xfce4:
-`
-	xfce4-terminal -x sh -c "speedtest; bash"
-`
 
 3. Fix Ibus can’t work in offices
 - Creat a ~/.xprofile file, then paste the following:
