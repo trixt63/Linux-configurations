@@ -15,7 +15,7 @@ Notes for some common problems in Linux
 ```
 	sudo umount /mnt/iso
 ```
-**2. Undetected USB drive
+**2. Undetected USB drive**
 - First, disconnect the USB device you're querying. Then, open a terminal window and input the "list USB" command: 
 ```
 lsusb
