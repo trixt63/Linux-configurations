@@ -2,7 +2,7 @@ Linux notes
 ================
 Notes for some common problems in Linux
 
-1. **How to mount**
+**1. How to mount**
 - Start by creating the mount point, it can be any location you want:
 ```
 	sudo mkdir /mnt/iso
@@ -15,13 +15,22 @@ Notes for some common problems in Linux
 ```
 	sudo umount /mnt/iso
 ```
-2. **Keyboard shortcuts**
+**2. Undetected USB drive
+- First, disconnect the USB device you're querying. Then, open a terminal window and input the "list USB" command: 
+```
+lsusb
+```
+- Make a note of the results, then connect the USB device, and run ```lsusb``` again. This time, you should see an extra device listed, with a Bus ID, Device ID, USB ID, and a description. 
+- Another user friendly: ```usb-devices```
+[Source](https://www.makeuseof.com/tag/fix-usb-device-port-linux/)
+
+**3. Keyboard shortcuts**
 - Command to open speedtest-cli in another terminal window in Xfce4:
 ```
 	xfce4-terminal -x sh -c "speedtest; bash"
 ```
 
-3. **Fix Ibus can’t work in offices**
+**4. Fix Ibus can’t work in offices**
 - Creat a ~/.xprofile file, then paste the following:
 ```
 	export GTK_IM_MODULE=ibus	
