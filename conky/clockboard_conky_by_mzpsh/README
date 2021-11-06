@@ -1,0 +1,11 @@
+	
+	About
+	Simple conky config, inspired from Google's Material Design.
+	Designed in Inkscape, config done in Geany.
+
+	Installation
+	Before installing, be sure you have Roboto and Roboto Light font installed on your system.
+	Just extract .conkyrc and .conkyrc-bg.png to your home folder.
+	(for example : /home/erika) and run conky
+	
+	If you want custom color for background, edit template.svg using Inkscape or similiar software, export it as PNG at 416x366 pixels.

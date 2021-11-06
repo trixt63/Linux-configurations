@@ -1,0 +1,79 @@
+use_xft yes
+xftfont Terminus:size=8
+xftalpha 0.8
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_argb_visual no
+own_window_type normal
+own_window_class conky-semi
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+background no
+double_buffer yes
+minimum_size 1920 1080
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders yes
+default_shade_color black
+default_outline_color white
+default_bar_size 150 5
+default_gauge_size 20 20
+imlib_cache_size 0
+draw_shades no
+alignment middle_left
+gap_x 0
+gap_y 0
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+default_color ECEAE4
+color1 
+#Green
+color2 0C890A
+#Red
+color3 FF0000
+
+own_window_argb_value 0
+own_window_colour 000000
+
+TEXT
+${image ~/.conky/FalloutHudConky/Fallout5.png  -p 0,0 -s 1920x1080}
+${goto 910}${voffset 915}${font :style=Bold}${color3}PROCESSES
+${goto 780}${voffset 3}${font Ubuntu:size=8} NAME  ${goto 1100} PID    CPU 
+${goto 780}${voffset 3} ${top name 1} ${goto 1100} ${top pid 1} ${top cpu 1}
+${goto 780}${voffset 3} ${top name 2} ${goto 1100} ${top pid 2} ${top cpu 2}
+${goto 780}${voffset 3} ${top name 3} ${goto 1100} ${top pid 3} ${top cpu 3}
+#${goto 780}${voffset 3} ${top name 4} $alignr ${top pid 4} ${top cpu 4}
+#${goto 780}${voffset 3} ${top name 5} $alignr ${top pid 5} ${top cpu 5}
+
+${goto 57}${voffset -220}${font :style=Bold}${color3}CPU1
+${goto 60}${voffset 5}${cpugauge 100,200}
+${goto 140}${voffset 10}${cpu cpu1}%
+${goto 270}${voffset -150}${font :style=Bold}${color3}CPU2
+${goto 390}${voffset 120}${cpu cpu2}%
+${goto 327}${voffset -120}${cpugauge 80,155}
+
+${goto 1680}${voffset -190}${font :style=Bold}${color3}WIRELESS
+${goto 1680}${voffset -0}${font Ubuntu:size=8}${font} Up: ${upspeed wlan0} ${goto 1770}${voffset 0}${upspeedgraph wlan0 8,60 000000 000000} 
+${goto 1680}${voffset 4}${font} Down: ${downspeed wlan0} ${goto 1770}${voffset 0}${downspeedgraph wlan0 8,60 000000 000000}
+${goto 1680}${voffset 4}${font} Upload: ${totalup wlan0}${font}
+${goto 1680}${voffset 4}${font} Dwnload: ${totaldown wlan0}${font}
+${goto 1680}${voffset 4}${font} Signal: ${wireless_link_qual wlan0}% 
+${goto 1680}${voffset 4}${font} IPv6: ${font :size=6}${addr wlan0}${font}
+
+${goto 1290}${voffset -45}${font :style=Bold}${color3}BAT1
+${goto 1300}${voffset 10}${battery_percent BAT1}% 
+
+${goto 1425}${voffset -90}${font :style=Bold}${color3}HD
+${goto 1390}${voffset 40}${font} ${voffset -5}Root: ${goto 1425}${voffset 0}${fs_bar 8,60}
+${goto 1400}${font Ubuntu:size=8}${fs_used /}/${fs_size /}
+${goto 1378}${voffset 5}${font}   ${voffset -5}Home: ${goto 1425}${voffset 0}${fs_bar 8,60}
+${goto 1400}${voffset 0}${fs_used /home}/${fs_size /home} 
+${goto 1378}${voffset 5}${font}   ${voffset -5}Media: ${goto 1425}${voffset 0}${fs_bar 8,60}
+${goto 1400}${voffset 0}${fs_used /media/wilbura}/${fs_size /media} 
+
+${goto 1680}${voffset -80}${font :style=Bold}DATE 
+${goto 1680}${voffset 0}${font size=8}${time %m/%d/%y %I:%M}

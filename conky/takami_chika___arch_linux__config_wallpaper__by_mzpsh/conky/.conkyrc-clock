@@ -1,0 +1,48 @@
+﻿-- vim: ts=4 sw=4 noet ai cindent syntax=lua
+
+conky.config = {
+	alignment = 'top_left',
+	background = false,
+	cpu_avg_samples = 2,
+	default_color = 'F5F5F6', -- dark AFB8C6 light 5C616C
+	--default_shade_color = '888888',
+	--default_bar_height = 6,
+	--default_bar_width = 204,
+	--default_graph_height = 30,
+	--default_graph_width = 162,
+	draw_borders = false,
+  draw_graph_borders = false,
+	draw_outline = false, 
+	draw_shades = false,
+	use_xft = true,
+	font = 'Roboto Condensed:Light:size=56',
+	gap_x = 76,
+	gap_y = 68,
+	minimum_height = 100 ,
+	minimum_width = 520, 
+	maximum_width = 520,
+	double_buffer = true,
+	out_to_console = false,
+	out_to_stderr = false,
+	own_window = true,
+	own_window_transparent = true,
+	--own_window_colour = '434A59', -- dark 2F343F light F5F6F7
+	--own_window_argb_visual = true,
+	--own_window_argb_value = 0,
+	own_window_class = 'Conky',
+	own_window_type = 'desktop',
+	own_window_hints = 'undecorated,skip_taskbar,skip_pager,below',
+	update_interval = 1,
+	
+  -- Uppercase test
+  uppercase = true, --remove comment if you want all caps
+
+	-- Fonts
+  template1 = [[${font Roboto Condensed::size=28}]],
+  template2 = [[${font Roboto Condensed:Light:size=28}]],
+	}
+  
+conky.text = [[
+${time %I:%M}${template1} ${time %p}
+${voffset 3}${offset 3}${time %A} ${template2}${time %d %B %Y}
+]]

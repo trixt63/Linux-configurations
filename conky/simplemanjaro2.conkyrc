@@ -11,6 +11,7 @@ conky.config = {
 alignment = 'top_right',
 background=true,
 update_interval=1,
+update_interval_on_battery = 5,
 double_buffer=true,
 no_buffers=true,
 imlib_cache_size=10,
@@ -19,7 +20,6 @@ draw_shades=false,
 draw_outline=false,
 draw_borders=false,
 
-update_interval_on_battery = 5.0,
 
 
 -------------------------------------
@@ -37,8 +37,7 @@ own_window_transparent=true,
 own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
 
 own_window_argb_visual=true,
--- own_window_argb_value=0,
-
+own_window_argb_value=0,
 
 
 -------------------------------------
@@ -54,12 +53,13 @@ override_utf8_locale=true,
 -------------------------------------
 --  Color Scheme
 -------------------------------------
-default_color='504945', -- percent numbers and such
+default_color='FBF1C7', -- percent numbers and such
 
-color0='665c54', -- clock
-color1='665c54', -- date
-color2='665c54', -- process's name
-color3='d65d0e', -- highest percentage & kernel name
+color='8EC07C', -- no idea
+color0='FBF1C7', -- clock
+color1='FBF1C7', -- date
+color2='FBF1C7', -- process's name
+color3='8ec07c', -- highest percentage & kernel name
 
 -------------------------------------
 --  Locale (e.g. "es_ES.UTF-8")
@@ -101,7 +101,7 @@ ${alignr} ${color} update available: ${font}${color3}${execpi 10800 checkupdates
 \
 \
 ${voffset 20}${goto 10}${color}CPU$alignr$cpu%
-${color2}${goto 10}${hr}
+${goto 10}$color${hr}
 ${voffset 5}${goto 10}$font$color2${top name 1}$alignr${color3}${top cpu 1}%
 ${goto 10}$color2${top name 2}$alignr$color${top cpu 2}%
 ${goto 10}$color2${top name 3}$alignr$color${top cpu 3}%
@@ -121,6 +121,4 @@ ${voffset 5}${goto 10}$alignr${color}$mem / $memmax
 \
 \
 \
-
-
 ]]

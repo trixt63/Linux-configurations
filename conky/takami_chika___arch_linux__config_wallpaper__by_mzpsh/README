@@ -1,0 +1,25 @@
+Conky Configuration and Installation.
+
+Installation.
+- Extract all files in conky folder to your home folder.
+- Run "conky" and additionaly run "conky -c $HOME/.conkyrc-clock" to show clock and date.
+
+Configuration.
+- Open .conkyrc file with your favorite text editor (tips: use "lua" as syntax highlighting mode).
+- To make cpu temperature monitoring work, at line 58, replace "coretemp.0/hwmon/hwmon1 temp 2" to your respected parameters:
+    - Check your "/sys/bus/platform/devices"
+    - Find "temp(number)_input" in "coretemp.0" folder, lowest number preferred.
+    - Mine was at "/sys/bus/platform/devies/coretemp.0/hwmon/hwmon1/temp2_input", so the parameter is "coretemp0/hwmon/hwmon temp 2".
+- To make network monitoring work, at line 59, replace all "wlp4s0" to your wireless network interface, or other preferred network interface, find it by typing "ifconfig" in your terminal, and check interface name at left side.
+
+
+Xfwm and GTK+ 2 Installation
+Just copy "Project-Orange-Cat" folder to "/home/yourhomefolder/.themes" , 
+
+Credits.
+GTK+ 2 theme based on Arc Theme by horst3180 http://github.com/horst3180/arc-theme
+
+There are Inkscape svg design files at "design-files" folder, including template for conky background, you can use it creatively!
+
+Regards,
+Mirza Miftahul Fadillah.

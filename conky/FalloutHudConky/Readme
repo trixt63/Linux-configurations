@@ -1,0 +1,26 @@
+==============================================================================
+#                               myconk1920
+# Date    : 06/13/2016
+# Author  : wilbura009
+# Version : v3
+# License : Creative Commons
+# 
+#=============================================================================
+
+----Issues? Leave me a comment on the the product page.-----
+----Do you like myconk? Upvote so others can enjoy here https://www.gnome-look.org/p/1118072/-----
+
+---Installation---
+1) Unzip files 
+2) Read myconk, correct paths and set to your configuration.
+---Running---   
+1) Open Termianl go to your file location - cd your/file/location.
+2) Then enter "conky -c myconk -q" in terminal.
+3) myconk should be running.
+
+--Note--
+You may need to configure the res and values to fit your screen.
+
+**Any suggestions on how to fix the config to adjust better to differents resolutions are welcome**
+
+Spanks!

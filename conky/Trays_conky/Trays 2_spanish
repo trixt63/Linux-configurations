@@ -1,0 +1,60 @@
+﻿background yes
+use_xft yes
+xftfont shrapnel:size=9
+xftalpha 1
+update_interval 1.0
+total_run_times 0
+own_window yes
+own_window_transparent yes
+own_window_type desktop
+#own_window_argb_visual yes
+own_window_type dock
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+double_buffer yes
+minimum_size 500 500
+#default_bar_size 60 8
+maximum_width 500
+maximum_length 500
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+default_color c6c4c7
+default_shade_color 000000
+default_outline_color 0054a3
+alignment top_right
+gap_x 1015
+gap_y 40
+no_buffers yes
+uppercase no
+cpu_avg_samples 2
+override_utf8_locale no
+lua_load timeb.lua
+
+
+
+own_window_argb_value 0
+own_window_argb_visual no
+own_window_colour 000000
+TEXT
+${image My.png -p 53,100 -s 375x55}
+${image My2.png -p 125,160 -s 300x47}
+${image My3.png -p 175,210 -s 250x47}
+${image My4.png -p 200,260 -s 225x47}
+${voffset 41}${offset 90}${font Swiss911 UCm BT:size=38}${color white}${lua Hour}${lua Minute}
+${voffset -5}${offset 220}${font Swiss911 UCm BT:size=38}${time %d %b, %Y}  
+${voffset -6}${offset 245}Mem:  $memperc%
+${voffset -10}${offset 260}Cpu:  ${cpu cpu0}%
+
+
+
+
+
+
+
+
+
+
+
+
+
