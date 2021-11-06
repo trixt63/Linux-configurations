@@ -1,0 +1,31 @@
+
+
+
+============================== DESCRIPTION ==============================
+A Conky config based on Gun Gale Online, a fictional vrmmorpg in anime 
+Sword Art Online 2.
+
+Mostly composited with 75% black and flat blue background with
+lightgray and white text color.
+
+Backgrounds and icon are .png
+
+no lua or other script included.
+
+Needed font : Open Sans
+Recommended resolution : 1280x800
+Result may vary on different desktop and/or other factor. Please tweak as
+needed.
+
++BONUS : GGO styled patched Notify-OSD config.
+==============================INSTALLATION ==============================
+
+1. Extract the zip to your home directory (ex: /home/anisa).
+2. Add the script named "start.sh", located at ".conkysao2" in your home
+   directory to startup application or gnome-session-properties 
+   (I don't know in KDE to add startup app :p)
+3. Logout and login again to take effect.
+
+==============================   LICENSE   ==============================
+
+All script and .png are licensed under GNU General Public License v.3

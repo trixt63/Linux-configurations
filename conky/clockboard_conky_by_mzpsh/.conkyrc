@@ -1,0 +1,51 @@
+-- vim: ts=4 sw=4 noet ai cindent syntax=lua
+
+conky.config = {
+	alignment = 'middle_middle',
+	background = false,
+	cpu_avg_samples = 2,
+	default_color = '90A4AE',
+	default_bar_height = 16,
+	default_bar_width = 340,
+	draw_borders = false,
+	draw_outline = false,
+	draw_shades = false,
+	use_xft = true,
+	font = 'Roboto:size=11',
+	gap_x = -10,
+	gap_y = -20,
+	minimum_height = 366,
+	minimum_width = 416,
+	maximum_width = 416,
+	double_buffer = true,
+	out_to_console = false,
+	out_to_stderr = false,
+	own_window = true,
+	own_window_transparent = true,
+	--own_window_colour = '333333',
+	own_window_argb_visual = true,
+	--own_window_argb_value = 63,
+	own_window_class = 'normal',
+	own_window_type = 'desktop',
+	own_window_hints = 'undecorated,skip_taskbar,skip_pager,below',
+	update_interval = 1,
+	update_interval_on_battery = 5,
+	mpd_host = 'localhost',
+	mpd_port = 6600,
+	color1 = 'FAFAFA',
+	color2 = '424242',
+	color3 = '9E9E9E',
+	color4 = '34AA54',
+	color5 = 'E0E0E0'
+	}
+
+conky.text = [[
+${voffset 10}${alignr 38}${time %d %B %Y}
+${voffset 24}${offset 48}$color1${font Roboto Light:size=80}${time %H}${alignr 63}${time %M}
+${voffset -198}${offset 369}${font Roboto :size=21}${time %S}
+${voffset 121}${offset 70}${font Roboto:size=19}$color2$memperc%${alignr 45}$color3${mem}
+${voffset 4}${offset 29}$color4$membar${offset -340}$color5${execibar 3599 echo 0}
+${voffset 19}${offset 105}${font Roboto:size=19}$color2$cpu%
+${voffset -29}${offset 280}${acpitemp}°C
+${image gruvbox_.conkyrc-bg.png -s 416x366}
+]]

@@ -1,0 +1,42 @@
+alignment bottom_middle
+background 
+border_width 30
+cpu_avg_samples 2
+double_buffer yes
+default_color white
+default_outline_color white
+default_shade_color white
+draw_borders no
+draw_graph_borders yes
+draw_outline no
+draw_shades no
+use_xft yes
+xftfont Open Sans:size=15
+gap_x 0
+gap_y -50
+minimum_size 5 5
+maximum_width 1280
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window yes
+own_window_transparent yes
+own_window_class normal
+own_window_type desktop
+stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer none
+show_graph_scale no
+show_graph_range no
+color1 e2e2e2
+
+
+TEXT
+${voffset 2}${font Open Sans:size=18}             ${time %H:%M}$alignr${font Open Sans:size=10}${voffset -10}${offset 35}$color1$nodename${font Open Sans:size=20}$color
+${voffset -26}$alignr${fs_bar 5,155}      
+${voffset -10}${font Open Sans:size=15}                $uptime_short$alignr $cpu     ${cpubar 10,110}        ${font Open Sans:size=14} ${font Open Sans:size=19}
+${font Open Sans:size=15}                $alignr $memperc     ${membar 10,110}        ${font Open Sans:size=14} 
+${font Open Sans:size=50}${image left.png -s 231x128 -p 25,0 }${image right.png -s 231x128 -p 1025,0 }                                                                                         
