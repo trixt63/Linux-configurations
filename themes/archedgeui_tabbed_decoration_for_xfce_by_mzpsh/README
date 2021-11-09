@@ -1,0 +1,12 @@
+
+ABOUT
+
+An experimental tabbed button window decoration for Xfce window manager (xfwm4) .
+Inspired from Alfheim Online user interface.
+(Kirito's harem watching BOB3 scene).
+
+INSTALLING
+
+- Extract "ArchedgeUI" and "ArchedgeUI 32px" folder to /home/youruser/.themes
+- Open Window Manager settings (xfwm4-settings)
+- Select theme and make sure button layout is : title shade hide maximize close
