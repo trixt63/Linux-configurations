@@ -44,3 +44,7 @@ xfce4-terminal -x sh -c "speedtest; bash"
 	#chịu:
 	export XIM_PROGRAM=/usr/bin/ibus-daemon
 ```
+
+**5. Port**
+- See all port: ```ss -tulw```
+- See a specific port, e.g. port 5000: ```lsof -i:5000```
