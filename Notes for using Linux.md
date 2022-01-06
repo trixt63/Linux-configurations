@@ -15,14 +15,24 @@ sudo mount /path/to/image.iso /mnt/iso -o loop
 ```
 sudo umount /mnt/iso
 ```
-**2. Undetected USB drive**
-- First, disconnect the USB device you're querying. Then, open a terminal window and input the "list USB" command: 
-```
-lsusb
-```
-- Make a note of the results, then connect the USB device, and run ```lsusb``` again. This time, you should see an extra device listed, with a Bus ID, Device ID, USB ID, and a description. 
-- Another user friendly: ```usb-devices```
-[Source](https://www.makeuseof.com/tag/fix-usb-device-port-linux/)
+**2.  USB drive**
+- List usb devices: ```lsusb```
+- List usb drive: ```lsblk ```
+- Format usb:
+	```
+	sudo mkfs.exfat /dev/sda1
+	```
+
+- Create a bootable usb
+	- Use ```fdisk``` to partition the usb, if it's not partitioned yet (only show ```/dev/sda```, no ```/dev/sda1```)
+	- Unmount the usb:
+	```
+		umount /dev/sda1
+	```
+	- Use ```dd``` and then ```sync``` to create bootable usb:
+	```
+		sudo dd if=path/to/input.iso of=/dev/sda status=progress && sync
+	```
 
 **3. Keyboard shortcuts**
 - Command to open speedtest-cli in another terminal window in Xfce4:
