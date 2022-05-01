@@ -2,7 +2,7 @@
 
 ## 1. i3wm
 
-- There are currently 3 themes:
+- There are currently 4 themes:
 	- Nord light
 	- Lunaria light
 	- Sushi
@@ -17,7 +17,9 @@ However, installation of Papirus-folders icon is recommended
 	- **lxappearance**: setting the fonts, and the gtk themes
 	- **brightnessctl**: controlling the brightness keys
 	- **i3blocks**: decorating the i3bar
-	- **rofi**: dmenu alternatives. You should install [rofi themes by adi1090x](https://github.com/adi1090x/rofi) first
+	- **rofi**: dmenu alternative. You should install [rofi themes by adi1090x](https://github.com/adi1090x/rofi) first
+	- **polybar*: i3blocks alternative. Looks much nicer, also support customization better
+	- **[maestrogerardo's i3-gaps-deb](https://github.com/maestrogerardo/i3-gaps-deb)**: Debian does not support i3-gaps. Use this repo to setup i3-gaps for your Debian machine
 
  The i3 config files are in ```i3``` folders. Put the contents into ~/.config/i3. Choose the right config file and change its name to ```config```
 
@@ -34,6 +36,8 @@ With Lunaria theme
 With Sushi theme
 ![img](/i3-sushi.png)
 
+Nord & Pink salmon
+![img](/i3-nord-sushi-with-polybar.png)
 
 ## 2. Xfce
 
@@ -51,10 +55,6 @@ Of course you have to install **conky** first. Installation of **conky-manager2*
 
 Alternatively, you can use [Gogh](https://gogh-co.github.io/Gogh/) instead
 
-PREVIEW
-
-Preview with simplemanjaro conky (although it's Debian)
-![img](/nord-simplemanjaro-preview.png)
 
 
 
