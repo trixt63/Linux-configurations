@@ -1,0 +1,9 @@
+[user]
+	email = xuantung.trinh.63@gmail.com
+	name = Xuan Tung Trinh
+[credential]
+	helper = cache --timeout=600
+[core]
+	editor = nvim
+[init]
+	defaultBranch = main
