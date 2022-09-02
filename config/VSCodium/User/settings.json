@@ -1,0 +1,60 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "bracket-pair-colorizer-2.colorMode": "Independent",
+    "bracket-pair-colorizer-2.colors": [
+    "Purple",
+    "darkturquoise",
+    "SandyBrown",
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "bracket-pair-colorizer-2.depreciation-notice": false,
+    "json.maxItemsComputed": 1000000,
+    "workbench.editorAssociations": {
+        "*.wasm": "default"
+    },
+    "editor.fontFamily": "'Hack', 'Liberation Mono', 'Font Awesome 5 Brands', 'Font Awesome 5 Free', 'Font Awesome 5 Free Solid', 'DejaVuSansMono Nerd Font Mono'",
+    // phường gậy đểu
+    "editor.rulers": [111],
+    "terminal.integrated.inheritEnv": false,
+    "workbench.colorTheme": "Night Owl Light",
+    // VscodeVim
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+        "before": ["j", "k"],
+        "after": ["<Esc>"]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+        "before": ["<leader>", "d"],
+        "after": ["d", "d"]
+        },
+        {
+        "before": ["<C-n>"],
+        "commands": [":nohl"]
+        },
+        {
+        "before": ["K"],
+        "commands": ["lineBreakInsert"],
+        "silent": true
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false,
+        "<C-c>": false,
+        "<C-v>": false,
+        "<C-s>": false,
+        "<C-w>": false,
+    },
+    "editor.fontWeight": "normal",
+    "editor.fontLigatures": false,
+    "editor.fontSize": 14.5
+}

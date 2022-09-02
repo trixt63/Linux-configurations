@@ -43,7 +43,7 @@ Xkbcomp is a tool for setting the xkb keyboard layout. Here is my notes on how t
 ## 2. Examples
 Here are a few examples on how I edit my xkbcomp:
 ### 2.1. CapsLock to Control
-- Schema for right alt will be like this:
+- Schema for CapsLock will be like this:
     - *Keycode*:  ```<CAPS>```
     - *Action*: ```Control_L```
     - *Modifier*: ```Control``` 
