@@ -51,7 +51,8 @@ Here are a few examples on how I edit my xkbcomp:
     ```
     xkb_symbols "pc+us+inet(evdev)" {
         ...
-        key <CAPS> {[ Control_L ]}    
+        // key <CAPS> {[ Caps_Lock ]}    
+        key <CAPS> {[ Control_L ]}    // CAPS to Control_L action
         ...
         // modifier_map Lock { <CAPS> };
         modifier_map Control { <CAPS> }; // CAPS to Control modifier
@@ -111,6 +112,24 @@ Here are a few examples on how I edit my xkbcomp:
     };
     ```
     Note: the keycode for right arrow key is RGHT
+### 2.3. PrtSc to Super_R
+- My ThinkPad has PrtSc between right alt and right control, so I want to turn that into right super. The schema will be like this:
+    - *Keycode*:  ```<PRSC>```
+    - *Action*: ```Super_R```
+    - *Modifier*: ```Mod4``` 
+- Similar to the CapsLock example, all we need to do is matching the CAPS keycode with Super_R action and Mod4 modifier in ***```xkb_symbols```***:
+    ```
+    xkb_symbols "pc+us+inet(evdev)" {
+        ...
+        key <PRSC> {
+            type= "PC_ALT_LEVEL2",
+            symbols[Group1]= [           Super_R,         Sys_Req ]
+        };
+        ...
+        modifier_map Mod4 { <PRSC> };
+    };
+    ```
+    Then, if you want to take screenshot, just use shortcuts with Super_R instead of Print.
 ## References
 1. [Guide for xkb on Arch Wiki](https://wiki.archlinux.org/title/X_keyboard_extension)
-2. [Xkb noted](https://www.charvolant.org/doug/xkb/html/node5.html#SECTION00052000000000000000)
+2. [Xkb notes](https://www.charvolant.org/doug/xkb/html/node5.html#SECTION00052000000000000000)

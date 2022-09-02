@@ -1423,7 +1423,8 @@ xkb_symbols "pc+us+inet(evdev)" {
     };
     key <PRSC> {
         type= "PC_ALT_LEVEL2",
-        symbols[Group1]= [           Print,         Sys_Req ]
+        // symbols[Group1]= [           Print,         Sys_Req ]
+        symbols[Group1]= [           Super_R,         Sys_Req ]
     };
     key <RALT> {
         type= "TWO_LEVEL",
@@ -1571,6 +1572,7 @@ xkb_symbols "pc+us+inet(evdev)" {
     // modifier_map Mod1 { <RALT> };
     modifier_map Mod5 { <RALT> };
     modifier_map Mod4 { <LWIN> };
+    modifier_map Mod4 { <PRSC> };
     modifier_map Mod4 { <RWIN> };
     modifier_map Mod5 { <MDSW> };
     modifier_map Mod1 { <META> };
