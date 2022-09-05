@@ -58,3 +58,18 @@ xfce4-terminal -x sh -c "speedtest; bash"
 **5. Port**
 - See all port: ```ss -tulw```
 - See a specific port, e.g. port 5000: ```lsof -i:5000```
+
+**6. LightDM remember user**
+- Try to modify in ```/etc/lightdm/lightdm.conf```:
+	```
+	greeter-hide-users=false
+	```
+
+**7. No Windows in Grub***
+- Grub does not use os-prober per default anymore and you will need to enable it in grub configuration to have other OS’s listed in the grub boot menu. Modify in ```/etc/default/grub```:
+	```
+	/etc/default/grub
+	---------------------
+	GRUB_DISABLE_OS_PROBER=false
+	```
+	Then run ```sudo update-grub```
