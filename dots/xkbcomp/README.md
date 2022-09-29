@@ -58,6 +58,24 @@ Here are a few examples on how I edit my xkbcomp:
         modifier_map Control { <CAPS> }; // CAPS to Control modifier
     };
     ```
+- In order to still use CapsLock, you can map RAlt + CapsLock to Caps_Lock:
+    ```
+    xkb_symbols "pc+us+inet(evdev)" {
+        ...
+        key <CAPS> {         [       Control_L,     Control_L,    Caps_Lock ] };
+        ...
+    };
+    ```
+- or map LeftControl to Caps_Lock:
+     ```
+    xkb_symbols "pc+us+inet(evdev)" {
+        ...
+        key <LCTL> {[ Caps_Lock ]}    
+        ...
+        modifier_map Lock { <LCTL> };
+    };
+    ```
+   
 ### 2.2. Map right alt to Mod5 and use P, F, N, B for arrows
 - Schema for right alt will be like this:
     - *Keycode*:  ```<RALT>```
