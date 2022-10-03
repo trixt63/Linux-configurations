@@ -148,6 +148,22 @@ Here are a few examples on how I edit my xkbcomp:
     };
     ```
     Then, if you want to take screenshot, just use shortcuts with Super_R instead of Print.
+### 2.4. RightShift to Up/Down
+- Another way to use Up/Down without reaching to the arrow keys is to map RightShift to Down, and RightAlt + RightShift to Up.
+- First, comment out the RightShift as a mod at the end of `xkb_symbols`, then modify the key.
+    ```
+    xkb_symbols "pc+us+inet(evdev)" {
+        ...
+        key <RTSH> {         
+            type= "CUST_LEVEL3",
+            symbols[Group1]= [            Down,            Down,            Up],
+            actions[Group1]= [       NoAction(),     NoAction() ,  RedirectKey(keycode=<UP>, clearmods=Mod5) ]
+        };
+        ...
+        // modifier_map Shift { <RTSH> };
+        ...
+        };
+    ```
 ## References
 1. [Guide for xkb on Arch Wiki](https://wiki.archlinux.org/title/X_keyboard_extension)
 2. [Xkb notes](https://www.charvolant.org/doug/xkb/html/node5.html#SECTION00052000000000000000)

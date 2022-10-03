@@ -693,6 +693,16 @@ xkb_types "complete" {
        level_name[Level2]= "Shift";
        level_name[Level3]= "Mod5";
    };
+    type "CUST_LEVEL4" {
+       modifiers= Shift+Mod5; 
+       map[Shift] = Level2;
+       map[Mod5] = Level3;
+       map[Shift+Mod5] = Level4;
+       level_name[Level1]= "Base";
+       level_name[Level2]= "Shift";
+       level_name[Level3]= "Mod5";
+       level_name[Level4]= "Shift Mod5";
+   };
 };
 
 xkb_compatibility "complete" {
@@ -1293,6 +1303,10 @@ xkb_symbols "pc+us+inet(evdev)" {
     key <AC10> {         [       semicolon,           colon ] };
     key <AC11> {         [      apostrophe,        quotedbl ] };
     key <TLDE> {         [           grave,      asciitilde ] };
+    // key <TLDE> {         
+    //     type = "CUST_LEVEL4",
+    //     symbols[Group1] = [          Escape,          Escape ,       grave,      asciitilde ]
+    // };
     key <LFSH> {         [         Shift_L ] };
     key <BKSL> {         [       backslash,             bar ] };
     key <AB01> {
@@ -1313,12 +1327,12 @@ xkb_symbols "pc+us+inet(evdev)" {
     };
     key <AB05> {
         type= "CUST_LEVEL3",
-        symbols[Group1]= [               b,               B,               Left],
+        symbols[Group1]= [               b,               B ,           Left],
        	actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<LEFT>, clearmods=Mod5) ]
     };
     key <AB06> {
         type= "CUST_LEVEL3",
-        symbols[Group1]= [               n,               N,               Down],
+        symbols[Group1]= [               n,               N,           Down],
        	actions[Group1]= [      NoAction(),      NoAction(),   RedirectKey(keycode=<DOWN>, clearmods=Mod5) ]
     };
     key <AB07> {
@@ -1328,7 +1342,12 @@ xkb_symbols "pc+us+inet(evdev)" {
     key <AB08> {         [           comma,            less ] };
     key <AB09> {         [          period,         greater ] };
     key <AB10> {         [           slash,        question ] };
-    key <RTSH> {         [         Shift_R ] };
+    // key <RTSH> {         [         Shift_R ] };
+    key <RTSH> {         
+        type= "CUST_LEVEL3",
+        symbols[Group1]= [            Down,            Down,            Up],
+       	actions[Group1]= [       NoAction(),     NoAction() ,  RedirectKey(keycode=<UP>, clearmods=Mod5) ]
+    };
     key <KPMU> {
         type= "CTRL+ALT",
         symbols[Group1]= [     KP_Multiply,     KP_Multiply,     KP_Multiply,     KP_Multiply,   XF86ClearGrab ]
@@ -1563,7 +1582,7 @@ xkb_symbols "pc+us+inet(evdev)" {
     key <I255> {         [      XF86RFKill ] };
     //modifier_map Control { <LCTL> };
     modifier_map Shift { <LFSH> };
-    modifier_map Shift { <RTSH> };
+    // modifier_map Shift { <RTSH> };
     modifier_map Mod1 { <LALT> };
     // modifier_map Lock { <CAPS> };
     modifier_map Lock { <LCTL> };
