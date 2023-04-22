@@ -1,5 +1,5 @@
 # Xkbcomp usage manual & some examples
-Xkbcomp is a tool for setting the xkb keyboard layout. Here is my notes on how to use xkbcomp, which is my intepretation from the [guide on Arch Wiki](https://wiki.archlinux.org/title/X_keyboard_extension). Please skim through this guide before proceding to the main content.
+Xkbcomp is a tool for setting the xkb keyboard layout. Here is my notes on how to use xkbcomp, which is my intepretation of the [guide on Arch Wiki](https://wiki.archlinux.org/title/X_keyboard_extension). Please skim through the Arch Wiki guide before proceding to the this readme.
 
 ## 1. General
 - To read the current config to an ```output.xkb``` file, use the following command:
