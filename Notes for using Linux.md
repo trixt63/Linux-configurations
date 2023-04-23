@@ -73,3 +73,8 @@ xfce4-terminal -x sh -c "speedtest; bash"
 	GRUB_DISABLE_OS_PROBER=false
 	```
 	Then run ```sudo update-grub```
+	
+**8. .desktop files**
+- Global desktop files are in: ```/usr/local/share/applications```
+- Local desktop files are in: ```~/.local/share/applications/```
+- Flatpak desktop files are inside folders located in: ```/var/lib/flatpak/app/```
