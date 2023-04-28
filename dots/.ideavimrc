@@ -13,6 +13,13 @@ set clipboard+=ideaput
 " Do incremental searching.
 set incsearch
 
+" Set Esc escape alternatives
+" imap 'Escape' <Esc>
+" imap kk <Esc>
+" imap jj <Esc>
+imap qq <Esc>
+" set timeoutlen=	500
+
 " Don't use Ex mode, use Q for formatting.
 map Q gq
 
@@ -25,27 +32,30 @@ map \e :e ~/.ideavimrc<CR>
 map \r :action IdeaVim.ReloadVimRc.reload<CR>
 
 "" Map Tab to Tab
-noremap <Tab> >>
-noremap <S-Tab> <<
-""vnoremap <Tab> >gv
-""vnoremap <S-Tab> <gv
 
-"" Map Space as header
+" Map Space as header
 let mapleader=" "
+
+" Terminal
+nnoremap <leader>t :action Terminal.OpenInTerminal<CR>
 
 ""Navigation
 nnoremap <c-\> :action SplitVertically<CR>
 nnoremap <c--> :action SplitHorizontally<CR>
 nnoremap <c-=> :action Unsplit<CR>
-nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+""nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
+
+sethandler <c-j> IdeaVim
+sethandler <c-k> IdeaVim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
 
 noremap <C-Tab> :action NextTab<CR>
 noremap <C-S-Tab> :action PreviousTab<CR>
-
-nnoremap <C-h> <c-w>h
-nnoremap <C-l> <c-w>l
-nnoremap <C-j> <c-w>j
-nnoremap <C-k> <c-w>k
+noremap <S-l> :action NextTab<CR>
+noremap <S-h> :action PreviousTab<CR>
 
 nnoremap <Leader>q :action CloseContent<CR>
 
@@ -58,4 +68,4 @@ nnoremap <Leader>q :action CloseContent<CR>
 "" Map \b tj toggle the breakpoint on the current line
 "map \b <Action>(ToggleLineBreakpoint)
 
-" Find more examples here: https://jb.gg/share-ideavimrc
+" Find more examples here: https://jb.gg/share-ideavimrcset ideajoin
