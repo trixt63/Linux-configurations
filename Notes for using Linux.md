@@ -78,3 +78,10 @@ xfce4-terminal -x sh -c "speedtest; bash"
 - Global desktop files are in: ```/usr/local/share/applications```
 - Local desktop files are in: ```~/.local/share/applications/```
 - Flatpak desktop files are inside folders located in: ```/var/lib/flatpak/app/```
+
+**9. Import .ssh files**
+- Make the private readable only by you: 
+```chmod 600 ~/.ssh/id_rsa```
+- Then add it to the system: 
+```ssh-add``` 
+Confirm with ```ssh-add -l``` 
