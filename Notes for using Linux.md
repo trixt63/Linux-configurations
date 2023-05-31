@@ -90,3 +90,8 @@ Confirm with ```ssh-add -l```
 Change in 2 files:
 - ```/etc/hostname```: Edit host name
 - ```/etc/hosts```: Add alias for localhost, on the 127.0.0.1 line. Or else some applications (such as Firefox) will take a long time to open 
+
+**11. Chrome driver**
+- Download and add chrome driver to ```/usr/bin/chromedriver/```
+- Add path to ```.profile```: 
+	```export PATH=$PATH:/usr/bin/chromedriver```
