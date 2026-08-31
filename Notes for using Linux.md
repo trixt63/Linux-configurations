@@ -95,3 +95,20 @@ Change in 2 files:
 - Download and add chrome driver to ```/usr/bin/chromedriver/```
 - Add path to ```.profile```: 
 	```export PATH=$PATH:/usr/bin/chromedriver```
+
+**12. Wifi stops after suspending**
+- Turn of power manager for NetworkManager: 
+```
+/etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
+----------------------------------
+[connection]
+wifi.powersave = 3
+```
+
+- Edit configuration for iwlwifi module
+```
+/etc/modprobe.d/iwlmvm.conf
+----------------------------------
+options iwlmvm power_scheme=1
+options iwlwifi 11n_disable=8
+```
