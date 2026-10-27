@@ -27,6 +27,8 @@
       <property name="&lt;Super&gt;a" type="string" value="/home/trinhtung/.config/qtile/scripts/audio_switch.sh"/>
       <property name="&lt;Super&gt;f" type="string" value="thunar"/>
       <property name="&lt;Primary&gt;&lt;Super&gt;m" type="string" value="xfce4-taskmanager"/>
+      <property name="&lt;Super&gt;d" type="string" value="launcher_t1"/>
+      <property name="&lt;Super&gt;p" type="string" value="powermenu_t2"/>
     </property>
   </property>
   <property name="xfwm4" type="empty">

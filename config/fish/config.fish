@@ -12,7 +12,7 @@ end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-eval /home/xuantung/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# eval /home/xuantung/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
 
@@ -20,7 +20,22 @@ eval /home/xuantung/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 starship init fish | source
 
 # flatpak
-set PATH $PATH:/var/lib/flatpak/sets/bin
+fish_add_path -gaP /var/lib/flatpak/exports/bin
 
 # pip packages
-set PATH $HOME/.local/bin:$PATH
+fish_add_path -gP $HOME/.local/bin
+
+# airflow
+set -gx AIRFLOW_HOME ~/Tovchain/airflow-cluster
+
+# Spark
+set -gx SPARK_HOME $HOME/.spark
+fish_add_path -gP $SPARK_HOME/bin
+
+# rofi scripts (launcher_t*, powermenu_t*), used by Qtile/XFCE shortcuts
+fish_add_path -gaP $HOME/.config/rofi/scripts
+
+# horizon omnissa client
+set LD_LIBRARY_PATH /usr/lib/omnissa
+# Added by dbt Fusion extension
+alias dbtf "/home/trinhtung/.local/bin/dbt"

@@ -1,0 +1,4 @@
+# This folder is symlinked from ~/.config/fish
+*.bak
+fish_variables
+conf.d/rustup.fish
