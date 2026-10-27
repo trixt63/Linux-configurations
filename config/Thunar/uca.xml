@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<submenu></submenu>
+	<unique-id>1713080934916186-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>preferences-system-user-sudo</icon>
+	<name>Open Thunar as Root</name>
+	<submenu></submenu>
+	<unique-id>1793118657309644-1</unique-id>
+	<command>sh -c &apos;pkexec env DISPLAY=&quot;$DISPLAY&quot; XAUTHORITY=&quot;$XAUTHORITY&quot; dbus-run-session thunar &quot;$0&quot;&apos; %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+</actions>

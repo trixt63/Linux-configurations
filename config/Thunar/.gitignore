@@ -1,0 +1,5 @@
+# This folder is symlinked from ~/.config/Thunar,
+# so every Thunar config file lands here. Only track the whitelisted ones.
+*
+!.gitignore
+!uca.xml
