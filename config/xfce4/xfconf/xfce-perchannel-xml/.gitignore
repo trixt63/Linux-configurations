@@ -1,0 +1,5 @@
+# This folder is symlinked from ~/.config/xfce4/xfconf/xfce-perchannel-xml,
+# so every xfconf channel lands here. Only track the whitelisted ones.
+*
+!.gitignore
+!xfce4-keyboard-shortcuts.xml
